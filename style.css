@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #1f2937;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addExpenseForm {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#expenseName,
+#expensePrice,
+#expenseCategory {
+    min-height: 44px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+#expenseName:focus,
+#expensePrice:focus,
+#expenseCategory:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+#submitBtn {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 5px 16px;
+    background-color: #4f46e5;
+    color: #fff;
+    font-size: 16px;
+}
+
+#submitBtn:hover {
+    background-color: #4338ca;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.error-message {
+    margin: 4px 0 12px;
+    color: #d32f2f;
+    font-size: 14px;
+    min-height: 18px;
+}
+
+.input-error {
+    border: 1px solid #d32f2f;
+}

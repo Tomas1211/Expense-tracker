@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Expense Tracker</h1>
+
+        <form id="addExpenseForm">
+
+            <div class="form-group">
+                <label for="expenseName">Položka</label>
+                <input
+                    type="text"
+                    name="expenseName"
+                    id="expenseName"
+                    placeholder="Zadajte názov"
+                >
+                <p class="error-message" id="nameErrorMessage"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="expensePrice">Cena</label>
+                <input
+                    type="number"
+                    name="expensePrice"
+                    id="expensePrice"
+                    placeholder="Zadajte cenu"
+                >
+                <p class="error-message" id="priceErrorMessage"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="expenseCategory">Kategória</label>
+                <select name="expenseCategory" id="expenseCategory">
+                    <option value="">-- Vyberte kategóriu --</option>
+                    <option value="food">Jedlo</option>
+                    <option value="transport">Doprava</option>
+                    <option value="housing">Bývanie</option>
+                    <option value="fun">Zábava</option>
+                    <option value="other">Iné</option>
+                </select>
+                <p class="error-message" id="categoryErrorMessage"></p>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                + Pridať položku
+            </button>
+
+        </form>
+
+
+        <div class="expenses-section">
+
+            <div class="filter">
+                <label for="categoryFilter">Filter položiek</label>
+
+                <select name="categoryFilter" id="categoryFilter">
+                    <option value="all">Všetky</option>
+                    <option value="food">Jedlo</option>
+                    <option value="transport">Doprava</option>
+                    <option value="housing">Bývanie</option>
+                    <option value="fun">Zábava</option>
+                    <option value="other">Iné</option>
+                </select>
+            </div>
+
+            <ul id="expensesList"></ul>
+
+        </div>
+
+
+        <div class="total">
+            <p>
+                Celkové výdavky:
+                <span id="totalExpense">0 €</span>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
